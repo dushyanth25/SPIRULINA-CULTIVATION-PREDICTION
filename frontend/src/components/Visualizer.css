@@ -1,0 +1,69 @@
+.visualizer-container {
+    text-align: center;
+    color: #FFD700; /* Gold color for all text */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url("R:/ML CAT-2/ML-Login-page-main/frontend/public/refbg.png"); /* Add your image path here */
+    background-size: cover; /* Make the image cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+    min-height: 90vh; /* Make sure the container takes up full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.visualizer-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #FFD700; /* Gold for heading */
+}
+
+.visualizer-container p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #FFD700; /* Gold for paragraphs */
+}
+
+.visualizer-container a {
+    color: #FFD700; /* Gold for links */
+    text-decoration: none;
+}
+
+.visualizer-container form {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #FFD700; /* Gold for form labels */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007BFF; /* Blue background for button */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white; /* White text on button */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

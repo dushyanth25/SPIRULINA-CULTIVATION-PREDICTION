@@ -1,0 +1,63 @@
+.sp-graph-container {
+    text-align: center;
+    margin: 20px;
+    padding: 40px;
+    background-image: url("R:/ML CAT-2/ML-Login-page-main/frontend/public/spc.png");
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center;
+    border-radius: 10px;
+    color: hsl(0, 3%, 6%);
+    width: 100%; /* Adjust width as needed, e.g., 100% or a specific px value */
+    height: 200px; /* Set a specific height, adjust according to your needs */
+}
+
+
+h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.graph-button {
+    background-color: rgba(76, 175, 80, 0.8);
+    border: none;
+    color: #0b0a0a;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.graph-button:hover {
+    background-color: rgba(69, 160, 73, 0.8);
+}
+
+.image-container {
+    margin-top: 120px;
+    display: flex;
+    justify-content: bottom;
+    gap: 10px;
+}
+
+.graph-image {
+    width: 350px;
+    height: 300px;
+    border-radius: 8px;
+    color: hwb(0 8% 92%); 
+}
+.decision-text  {
+    color: hwb(0 8% 92%); 
+    font-weight: bold; /* Optional: make the text bold */
+    font-size: 18px; /* Optional: change the font size */
+}

@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  transition: transform 0.2s ease-in-out; /* Smooth transform effect on hover */
+}
+
+.App-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background: linear-gradient(135deg, #282c34, #4b5563); /* Gradient background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+.App-link {
+  color: #61dafb;
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and transform */
+}
+
+.App-link:hover {
+  color: #21a1f1; /* Change link color on hover */
+  transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Smaller font size for mobile */
+  }
+  
+  .App-logo {
+    height: 30vmin; /* Reduce logo size for mobile */
+  }
+}

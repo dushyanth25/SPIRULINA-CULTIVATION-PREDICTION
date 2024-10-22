@@ -1,0 +1,178 @@
+.home-container {
+    display: flex;
+    height: 100vh; /* Full height */
+    background-color: #181818; /* Slightly lighter dark background */
+    color: #ffffff; /* Light text color */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 320px; /* Increase the width of the sidebar */
+    background-color: #2c2c2c; /* Darker sidebar background */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    border-radius: 8px; /* Round corners */
+    transform: translateX(-100%); /* Start off-screen */
+    animation: slideIn 0.7s ease forwards; /* Smooth slide-in */
+    z-index: 10; /* Ensure sidebar is above content */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start from the left */
+    }
+    to {
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
+/* Sidebar heading styling */
+.sidebar h3 {
+    color: #FFD700; /* Golden text for the header */
+    margin-bottom: 20px;
+    font-size: 22px; /* Increase font size for headers */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Spacing for text */
+    animation: fadeInSlideDown 1.2s ease forwards; /* Heading animation */
+}
+
+/* Keyframes for the heading slide-down effect */
+@keyframes fadeInSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 20px 0; /* Increase spacing */
+}
+
+.sidebar li a {
+    color: hwb(80 97% 2%); /* Light purple for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; /* Include transform in the transition */
+    padding: 10px 15px; /* Add padding to make links feel interactive */
+    display: block;
+    border-radius: 8px; /* Round link buttons */
+}
+
+.sidebar li a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+    background-color: rgba(228, 209, 252, 0.2); /* Light background on hover */
+    transform: scale(1.08); /* Slightly scale up the link */
+}
+
+/* Content area styling */
+.content {
+    flex: 1; /* Take up the remaining space */
+    padding: 30px; /* Increase padding for better spacing */
+    background-color: #f7ebeb; /* Lighter background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 1.2s ease forwards; /* Fade-in effect */
+    position: relative; /* Positioning for any additional elements */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95); /* Start slightly scaled down */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Expand to full size */
+    }
+}
+
+/* Content heading hover effect */
+.content h1 {
+    color: rgb(239, 232, 85); /* Yellow heading color */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+}
+
+.content h1:hover {
+    color: #FFD700; /* Change color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+    text-shadow: 0 4px 10px rgba(255, 255, 0, 0.5); /* Add subtle glow */
+}
+
+/* Paragraph styling */
+.content p {
+    color: hwb(0 97% 2%);
+    font-size: 16px;
+    line-height: 1.6;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color */
+}
+
+/* Hover effect for paragraph */
+.content p:hover {
+    color: #333; /* Slight darkening on hover */
+    transform: translateY(-5px); /* Shift slightly upward */
+}
+
+/* Additional styling for better readability */
+.content h1, .content p {
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Sidebar button for mobile view */
+.sidebar-toggle {
+    display: none; /* Hidden on desktop */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #FFD700;
+    border: none;
+    color: #000;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 20; /* Above the sidebar */
+}
+
+/* Sidebar toggle button styling */
+.sidebar-toggle:hover {
+    background-color: #ffa500; /* Darken on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width on mobile */
+        box-shadow: none;
+        transform: translateX(-100%); /* Start hidden */
+        animation: none; /* No animation by default */
+    }
+
+    .sidebar.open {
+        transform: translateX(0); /* Show sidebar on toggle */
+        animation: slideIn 0.5s ease forwards; /* Animate sliding in */
+    }
+
+    .sidebar-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    .content {
+        padding: 20px;
+        animation: fadeIn 0.8s forwards; /* Faster animation for mobile */
+    }
+}

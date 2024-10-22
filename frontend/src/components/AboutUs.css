@@ -1,0 +1,146 @@
+.about-us {
+    background-image: url("R:/ML CAT-2/ML-Login-page-main/frontend/public/about.png"); /* Use forward slashes */
+    background-size: cover;
+    background-position: center;
+    padding: 40px; /* Increase padding for better spacing */
+    color: #fff;
+    border-radius: 8px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; /* Longer fade-in for smoother effect */
+    position: relative;
+    overflow: hidden; /* Contain elements inside */
+    height: 400px; /* Limit height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Start with slight downward offset */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move up to normal position */
+    }
+}
+
+/* Parallax effect for background */
+.about-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Blur background for depth */
+    z-index: -1; /* Behind content */
+    transform: scale(1.1); /* Slight zoom */
+    transition: transform 1s ease; /* Smooth transition on scroll */
+}
+
+.about-us:hover::before {
+    transform: scale(1.05); /* Subtle zoom-in effect on hover */
+}
+
+.about-us h1, .about-us h2, .about-us h3, .about-us h4 {
+    color: #FFD700; /* Gold for headings */
+    animation: bounceIn 1.2s ease; /* Smoother bounce animation */
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Subtle paragraph hover effect */
+.about-us p {
+    color: hsl(0, 0%, 95%);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-us p:hover {
+    color: #FFD700; /* Change to gold on hover */
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Interactive link with hover animation */
+.about-us a {
+    color: #00FF00;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    transition: background-color 0.4s ease, transform 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.about-us a:hover {
+    background-color: rgba(0, 255, 0, 0.3);
+    transform: translateY(-5px) scale(1.05); /* Hover raises and scales link */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Interactive section toggle */
+.section-toggle {
+    cursor: pointer;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.section-toggle:hover {
+    background-color: #ffa500;
+}
+
+/* Collapsible sections */
+.collapsible {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.6s ease-out;
+}
+
+.collapsible.open {
+    max-height: 300px; /* Adjust as needed */
+}
+
+/* Style for the toggle button content */
+.section-content {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Add custom scrollbar styling for the about-us section */
+.about-us::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.about-us::-webkit-scrollbar-thumb {
+    background-color: #FFD700; /* Gold scrollbar thumb */
+    border-radius: 10px; /* Round edges of scrollbar thumb */
+}
+
+.about-us::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent scrollbar track */
+}
